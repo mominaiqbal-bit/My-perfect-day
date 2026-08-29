@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Perfect Day - Scrapbook</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Yuyu&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .card-wrapper {
+      font-family: "Bebas Neue", system-ui, -apple-system, sans-serif;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .card {
+      background-color: #96280d;
+      color: #ffffff;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      animation: fadeInUp 0.55s ease both;
+    }
+    @media (max-width: 640px) {
+      .card {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="card-wrapper">
+      <div class="card">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px;">
+          <h1 style="margin: 0; font-size: 1.5rem; font-weight: 700; line-height: 1.25; color: #ffffff;">
+            My Perfect Day
+          </h1>
+          <p style="margin: 0; font-size: 0.95rem; line-height: 1.65; opacity: 0.9; color: #ffffff;">
+            a little collection of how a perfect day might look like to some people
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Tab Radio Buttons -->
+    <input type="radio" name="day-tabs" id="tab-morning" checked />
+    <input type="radio" name="day-tabs" id="tab-afternoon" />
+    <input type="radio" name="day-tabs" id="tab-evening" />
+
+    <!-- Tab Navigation -->
+    <div class="tabs">
+      <label for="tab-morning">Morning☀️</label>
+      <label for="tab-afternoon">Afternoon🌤️</label>
+      <label for="tab-evening">Evening🌙</label>
+    </div>
+
+    <!-- Morning Tab Content -->
+    <div class="tab-content" id="Morning">
+      <div class="polaroid rot left tape-pink">
+        <img src="cup.png" alt="morning coffee" />
+        <p>Warm coffee and Slow mornings☕️</p>
+      </div>
+
+      <div class="sticky-note rot right">
+        <h3>Today's intention</h3>
+        <p>take deep breaths and don't rush things</p>
+      </div>
+
+      <div class="polaroid rot-slight">
+        <img src="morning.png" alt="watch the world wake up" />
+        <p>watch the world wake up🌅</p>
+      </div>
+    </div>
+
+    <!-- Afternoon Tab Content -->
+    <div class="tab-content" id="Afternoon">
+      <div class="polaroid rot left tape-yellow">
+        <img src="lunch.png" alt="afternoon lunch" />
+        <p>Lunch with friends🍱</p>
+      </div>
+
+      <div class="sticky-note rot right">
+        <h3>playlists</h3>
+        <p>indie songs and punk rock to keep the energy up</p>
+        <iframe
+          data-testid="embed-iframe"
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1DWVTKDs2aOkxu?utm_source=generator&si=1b0e50ceb3f6421d"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Evening Tab Content -->
+    <div class="tab-content" id="Evening">
+      <div class="polaroid rot left tape-blue">
+        <img src="sunrise.png" alt="evening sunset" />
+        <p>Sunset and a quiet evening🌇</p>
+      </div>
+
+      <div class="sticky-note rot left">
+        <h3>movie night</h3>
+        <img src="ghibli.png" alt="studio ghibli" />
+        <p>studio ghibli and hot ramen🍜</p>
+      </div>
+
+      <div class="polaroid rot-slight">
+        <img src="night.png" alt="peaceful night" />
+        <p>A peaceful night🌌</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
